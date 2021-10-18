@@ -1,0 +1,95 @@
+
+body {
+  background-color: #9370db;
+}
+
+h1 {
+  color: #c0c0c0;
+  font-size: 1.2rem;
+  margin-left: 20%;
+  margin-top: 15%;
+}
+
+h2 {
+  color: #fff;
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+
+p {
+  color: #fff;
+  font-size: 0.73rem;
+}
+
+.title {
+  height: 133px;
+  background-color: #7a4dd7;
+}
+
+.picture {
+  margin-top: 20px;
+  margin-left: 20%;
+  width: 60%;
+  height: 625px;
+  padding-top: 153px;
+  background-image: url("../images/makeup.JPG");
+  border-radius: 18px;
+}
+
+.search-button {
+  width: 105px;
+  height: 37px;
+  border-radius: 18px;
+  color: #635f5f;
+  background-color: #d8bfd8;
+  font-size: 10px;
+  border-style: none;
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+.button {
+  padding-top: 12px;
+  text-align: end;
+  margin-right: 20%;
+}
+
+.text {
+  margin-top: 20px;
+  padding-top: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  width: 80%;
+  height: 625px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+}
+
+@media screen and (min-width: 765px) {
+  h1 {
+    margin-top: 5%;
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .search-button {
+    margin-top: 3%;
+    width: 199px;
+    height: 59px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 1.1rem;
+  }
+}
