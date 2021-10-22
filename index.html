@@ -15,6 +15,10 @@
   <main>
   </main>
 
+  <div class="container">
+    <div class="overlay hidden"></div>
+  </div>
+
   <div class="container title">
       <div class="column-one-third">
         <h1><span class="natural-makeup-text">Natural Makeup Search</span></h1>
@@ -24,14 +28,13 @@
         <div class="button">
           <button class="search-button">Search Product</button>
         </div>
-        </div>
-
       </div>
+
+  </div>
 
   <div class="container">
     <div class="column-one-third">
       <div class="picture">
-
       </div>
     </div>
 
@@ -60,10 +63,34 @@
             our earth. So please take care of yourself and our planet, make a good decision and wear natural makeup products.
           </p>
         </div>
+
+        <div class="view-products hidden">
+          <div class="product-type-title">
+          </div>
+        <div class="view-products-row">
+      </div>
+
+      </div>
+        <div class="back-button hidden">
+          <button class="back">Back</button>
+        </div>
+      </div>
+
     </div>
 
-
-  </div>
+    <div class="modal-search hidden">
+      <div class="pop-up">
+        <div class="dropdown-list">
+            <label for="product-type" class="label-product-type">Product Type:</label>
+            <select id="product-type" name="product-type">
+              <option value="product-type"></option>
+            </select>
+        </div>
+        <div>
+          <button class="modal-search-button">Search</button>
+        </div>
+      </div>
+    </div>
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
