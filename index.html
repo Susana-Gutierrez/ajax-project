@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div class="column-two-third">
+    <div class="column-two-third ">
         <div class="text">
           <h2>Why it’s important to use natural and organic products on your skin</h2>
 
@@ -65,17 +65,19 @@
         </div>
 
         <div class="view-products hidden">
-          <div class="product-type-title">
-          </div>
-        <div class="view-products-row">
-      </div>
+          <div class="product-type-title"></div>
+          <div class="title-tags"></div>
+          <div class="view-products-row"></div>
+        </div>
 
-      </div>
-        <div class="back-button hidden">
-          <button class="back">Back</button>
+        <div class="view-single-product hidden">
+        </div>
+
+        <div class="buttons">
+          <button class="buy-now hidden">Buy Now</button>
+          <button class="back hidden">Back</button>
         </div>
       </div>
-
     </div>
 
     <div class="modal-search hidden">
@@ -83,9 +85,51 @@
         <div class="dropdown-list">
             <label for="product-type" class="label-product-type">Product Type:</label>
             <select id="product-type" name="product-type">
-              <option value="product-type"></option>
+              <option value="product-type">Select a product type...</option>
             </select>
         </div>
+
+        <div class="tags">
+
+          <div class="single-tag single-row">
+            <span class="label-product-tag">Product Tags:</span>
+          </div>
+
+          <div class="single-tag">
+          <label class="single-tag-label" for="vegan">Vegan:</label>
+          <input type="checkbox" id="vegan" name="vegan" value="vegan">
+          </div>
+
+          <div class="single-tag">
+          <label class="single-tag-label" for="glutenfree">Gluten Free:</label>
+          <input type="checkbox" id="glutenfree" name="glutenfree" value="glutenfree">
+          </div>
+
+          <div class="single-tag">
+          <label class="single-tag-label" for="hypoallergenic">Hypoallergenic:</label>
+          <input type="checkbox" id="hypoallergenic" name="hypoallergenic" value="hypoallergenic"><br>
+          </div>
+
+          <div class="single-tag single-row">
+          </div>
+
+          <div class="single-tag">
+          <label class="single-tag-label" for="organic">Organic:</label>
+          <input type="checkbox" id="organic" name="organic" value="organic">
+          </div>
+
+          <div class="single-tag">
+          <label class="single-tag-label" for="notalc">No Talc:</label>
+          <input type="checkbox" id="notalc" name="notalc" value="notalc">
+          </div>
+
+          <div class="single-tag">
+          <label class="single-tag-label" for="notalc">Natural:</label>
+          <input type="checkbox" id="natural" name="natural" value="natural">
+          </div>
+
+        </div>
+
         <div>
           <button class="modal-search-button">Search</button>
         </div>
