@@ -79,7 +79,8 @@ option {
   margin-right: 20%;
 }
 
-.text {
+.text,
+.view-single-product {
   margin-top: 1.25rem;
   padding-top: 1%;
   padding-left: 10%;
@@ -91,12 +92,18 @@ option {
   border-radius: 1.12rem;
 }
 
+.view-single-product {
+  color: #fff;
+  padding: 1.25rem;
+  overflow-y: scroll;
+}
+
 .pop-up {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   padding-top: 0.9rem;
   padding-right: 0.6rem;
   padding-left: 0.6rem;
@@ -120,10 +127,6 @@ option {
   border-color: rgb(228, 225, 225);
 }
 
-.label-product-type {
-  font-size: 1rem;
-}
-
 .overlay {
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
@@ -136,7 +139,7 @@ option {
 .modal-search-button {
   width: 4.5rem;
   height: 2rem;
-  margin-top: 7rem;
+  margin-top: 1.5rem;
   border-radius: 1.1rem;
   border-style: none;
   background-color: #d8bfd8;
@@ -146,6 +149,12 @@ option {
 .product-type-title {
   color: #fff;
   font-size: 1.5rem;
+}
+
+.title-tags {
+  padding-top: 0.3rem;
+  color: #fff;
+  font-size: 0.9rem;
 }
 
 .view-products {
@@ -161,8 +170,8 @@ option {
 }
 
 .product-container {
-  margin-bottom: 1.8rem;
-  margin-top: 2.3rem;
+  margin-bottom: 1.1rem;
+  margin-top: 1.8rem;
 }
 
 .product-img {
@@ -174,6 +183,20 @@ option {
 .product-img img {
   align-content: center;
   width: 80%;
+  border-radius: 1.1rem;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.single-product {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.75rem;
+}
+
+.single-product-img img {
+  margin: 0.5rem;
+  width: 25%;
   border-radius: 1.1rem;
   background-color: lightgray;
 }
@@ -199,6 +222,37 @@ option {
   margin-right: 20%;
 }
 
+.single-product-title {
+  font-size: 1.1rem;
+}
+
+.single-tag-label {
+  font-size: 0.5rem;
+}
+
+.shade {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.62rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.shade-name {
+  margin-left: 0.31rem;
+  margin-right: 0.31rem;
+  font-size: 0.6rem;
+}
+
+.line {
+  width: 100%;
+}
+
+.single-product-description,
+.single-product-tags {
+  text-align: left;
+}
+
 @media screen and (min-width: 47.8rem) {
   h1 {
     margin-top: 5%;
@@ -214,11 +268,12 @@ option {
   }
 
   option {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-  .label-product-type {
-    font-size: 1.2rem;
+  .label-product-type,
+  .label-product-tag {
+    font-size: 0.9rem;
   }
 
   .search-button {
@@ -235,13 +290,28 @@ option {
   .modal-search-button {
     width: 8.8rem;
     height: 4.1rem;
-    margin-top: 10rem;
+    margin-top: 4rem;
     font-size: 1rem;
   }
 
   .pop-up {
     width: 42rem;
     height: 20.5rem;
+    font-size: 1.1rem;
+  }
+
+  .single-tag-label {
+    font-size: 0.7rem;
+  }
+
+  .single-product-title {
+    font-size: 1.25rem;
+  }
+
+  .single-product {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
   }
 }
 
