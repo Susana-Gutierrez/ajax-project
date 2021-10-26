@@ -2,5 +2,6 @@
 
 var data = {
   view: '',
-  entries: []
+  entries: [],
+  url: ''
 };

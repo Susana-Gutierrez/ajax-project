@@ -11,7 +11,6 @@ const $overlay = document.querySelector('.overlay');
 const $text = document.querySelector('.text');
 const $viewProducts = document.querySelector('.view-products');
 const $back = document.querySelector('.back');
-const $backButton = document.querySelector('.back-button');
 const $productTypeTitle = document.querySelector('.product-type-title');
 const $viewProductsRow = document.querySelector('.view-products-row');
 const $vegan = document.querySelector('#vegan');
@@ -22,7 +21,7 @@ const $notalc = document.querySelector('#notalc');
 const $natural = document.querySelector('#natural');
 const $titletags = document.querySelector('.title-tags');
 const $viewSingleProduct = document.querySelector('.view-single-product');
-
+const $buyNow = document.querySelector('.buy-now');
 var url;
 
 var tags = [];
@@ -42,7 +41,6 @@ function handleClickSearchButton(events) {
 $searchButton.addEventListener('click', handleClickSearchButton);
 
 function listProducts(id, picture, brand, name, price) {
-
   const elementDiv = document.createElement('div');
   elementDiv.setAttribute('class', 'product-container');
   const elementDiv2 = document.createElement('div');
@@ -199,6 +197,7 @@ function ajax(link) {
       const tagList = xhr.response[product].tag_list;
       const shades = xhr.response[product].product_colors;
       const description = xhr.response[product].description;
+      const productLink = xhr.response[product].product_link;
 
       if (xhr.response[product].price_sign != null) {
         priceOfProduct = xhr.response[product].price_sign + xhr.response[product].price;
@@ -214,7 +213,8 @@ function ajax(link) {
         price: priceOfProduct,
         shades: shades,
         description: description,
-        tag: tagList
+        tag: tagList,
+        link: productLink
       };
 
       for (let i = 0; i < data.entries.length; i++) {
@@ -258,9 +258,11 @@ function addTitletags() {
 function handleClickModalSearchButton(events) {
   tags = [];
   data.entries = [];
+  data.view = '';
   $modalSearch.className = 'hidden';
   $overlay.className = 'hidden';
-  $backButton.className = 'back-button';
+  $back.className = 'back';
+  $buyNow.className = 'hidden';
 
   checkingCheckboxes();
 
@@ -272,10 +274,9 @@ function handleClickModalSearchButton(events) {
     $viewProducts.className = 'view-products';
   } else {
     if ($text.className === 'text') {
-      $backButton.className = 'back-button hidden';
+      $back.className = 'back hidden';
     }
   }
-
 
   if (($typeOfProduct.value !== 'product-type') && (tags.length > 0)) {
     $productTypeTitle.textContent = $typeOfProduct.value;
@@ -302,7 +303,6 @@ function handleClickModalSearchButton(events) {
     for (let i = 0; i < tags.length; i++) {
       url = 'http://makeup-api.herokuapp.com/api/v1/products.json?product_tags=' + tags[i];
       ajax(url);
-
     }
   }
 }
@@ -315,11 +315,12 @@ function handleClickBackButton(event) {
     $viewSingleProduct.className = 'hidden';
     $viewSingleProduct.innerHTML = '';
     $viewProducts.className = 'view-products';
+    $buyNow.className = 'hidden';
     data.view = '';
   } else {
     $text.className = 'text';
     $viewProducts.className = 'hidden';
-    $backButton.className = 'hidden';
+    $back.className = 'hidden';
     $typeOfProduct.value = 'product-type';
     $vegan.checked = false;
     $glutenFree.checked = false;
@@ -328,8 +329,6 @@ function handleClickBackButton(event) {
     $notalc.checked = false;
     $natural.checked = false;
   }
-
-
 }
 
 $back.addEventListener('click', handleClickBackButton);
@@ -342,6 +341,7 @@ function handleClickviewProductsRow(event) {
     $viewProducts.className = 'hidden';
     $viewSingleProduct.className = 'view-single-product';
     data.view = 'view-single-product';
+    $buyNow.className = 'buy-now';
 
     for (let i = 0; i < data.entries.length; i++) {
       if (data.entries[i].id === parseInt(idProduct)) {
@@ -356,7 +356,7 @@ function handleClickviewProductsRow(event) {
           description: data.entries[i].description,
           tag: data.entries[i].tag
         };
-
+        data.url = data.entries[i].link;
       }
     }
 
@@ -366,6 +366,13 @@ function handleClickviewProductsRow(event) {
 }
 
 $viewProductsRow.addEventListener('click', handleClickviewProductsRow);
+
+function handleBuyNowClick(event) {
+  window.open(data.url);
+  data.url = '';
+}
+
+$buyNow.addEventListener('click', handleBuyNowClick);
 
 function handleDOMContentLoaded(event) {
   for (let i = 0; i < typeOfProduct.length; i++) {

@@ -206,9 +206,10 @@ option {
   font-size: 0.7rem;
 }
 
-.back {
-  width: 5.7rem;
-  height: 2.3rem;
+.back,
+.buy-now {
+  width: 5rem;
+  height: 2rem;
   border-radius: 1.1rem;
   border-style: none;
   background-color: #d8bfd8;
@@ -216,10 +217,14 @@ option {
   cursor: pointer;
 }
 
-.back-button {
+.buttons {
   padding-top: 0.9rem;
   text-align: end;
   margin-right: 20%;
+}
+
+.single-product-title {
+  font-size: 1.1rem;
 }
 
 .single-tag-label {
@@ -269,7 +274,6 @@ option {
 
   .label-product-type,
   .label-product-tag {
-
     font-size: 0.9rem;
   }
 
@@ -299,7 +303,6 @@ option {
 
   .single-tag-label {
     font-size: 0.7rem;
-
   }
 
   .single-product-title {
@@ -310,6 +313,17 @@ option {
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
     font-size: 0.9rem;
+  }
+
+  .back,
+  .buy-now {
+    width: 5.7rem;
+    height: 2.3rem;
+    border-radius: 1.1rem;
+    border-style: none;
+    background-color: #d8bfd8;
+    color: #635f5f;
+    cursor: pointer;
   }
 }
 
