@@ -222,10 +222,6 @@ option {
   margin-right: 20%;
 }
 
-.single-product-title {
-  font-size: 1.1rem;
-}
-
 .single-tag-label {
   font-size: 0.5rem;
 }
@@ -273,6 +269,7 @@ option {
 
   .label-product-type,
   .label-product-tag {
+
     font-size: 0.9rem;
   }
 
@@ -302,6 +299,7 @@ option {
 
   .single-tag-label {
     font-size: 0.7rem;
+
   }
 
   .single-product-title {

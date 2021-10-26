@@ -22,6 +22,7 @@ const $notalc = document.querySelector('#notalc');
 const $natural = document.querySelector('#natural');
 const $titletags = document.querySelector('.title-tags');
 const $viewSingleProduct = document.querySelector('.view-single-product');
+
 var url;
 
 var tags = [];
@@ -275,6 +276,7 @@ function handleClickModalSearchButton(events) {
     }
   }
 
+
   if (($typeOfProduct.value !== 'product-type') && (tags.length > 0)) {
     $productTypeTitle.textContent = $typeOfProduct.value;
     $titletags.textContent = '   - tags: ';
@@ -300,6 +302,7 @@ function handleClickModalSearchButton(events) {
     for (let i = 0; i < tags.length; i++) {
       url = 'http://makeup-api.herokuapp.com/api/v1/products.json?product_tags=' + tags[i];
       ajax(url);
+
     }
   }
 }
@@ -307,6 +310,7 @@ function handleClickModalSearchButton(events) {
 $modalSearchButton.addEventListener('click', handleClickModalSearchButton);
 
 function handleClickBackButton(event) {
+
   if (data.view === 'view-single-product') {
     $viewSingleProduct.className = 'hidden';
     $viewSingleProduct.innerHTML = '';
@@ -324,6 +328,7 @@ function handleClickBackButton(event) {
     $notalc.checked = false;
     $natural.checked = false;
   }
+
 
 }
 
