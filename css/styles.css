@@ -96,7 +96,7 @@ option {
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   padding-top: 0.9rem;
   padding-right: 0.6rem;
   padding-left: 0.6rem;
@@ -120,10 +120,6 @@ option {
   border-color: rgb(228, 225, 225);
 }
 
-.label-product-type {
-  font-size: 1rem;
-}
-
 .overlay {
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
@@ -136,7 +132,7 @@ option {
 .modal-search-button {
   width: 4.5rem;
   height: 2rem;
-  margin-top: 7rem;
+  margin-top: 1.5rem;
   border-radius: 1.1rem;
   border-style: none;
   background-color: #d8bfd8;
@@ -146,6 +142,12 @@ option {
 .product-type-title {
   color: #fff;
   font-size: 1.5rem;
+}
+
+.title-tags {
+  padding-top: 5px;
+  color: #fff;
+  font-size: 0.9rem;
 }
 
 .view-products {
@@ -161,8 +163,8 @@ option {
 }
 
 .product-container {
-  margin-bottom: 1.8rem;
-  margin-top: 2.3rem;
+  margin-bottom: 1.1rem;
+  margin-top: 1.8rem;
 }
 
 .product-img {
@@ -199,6 +201,10 @@ option {
   margin-right: 20%;
 }
 
+.single-tag-label {
+  font-size: 0.5rem;
+}
+
 @media screen and (min-width: 47.8rem) {
   h1 {
     margin-top: 5%;
@@ -214,11 +220,11 @@ option {
   }
 
   option {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-  .label-product-type {
-    font-size: 1.2rem;
+  .label-product-type .label-product-tag {
+    font-size: 0.9rem;
   }
 
   .search-button {
@@ -235,13 +241,18 @@ option {
   .modal-search-button {
     width: 8.8rem;
     height: 4.1rem;
-    margin-top: 10rem;
+    margin-top: 4rem;
     font-size: 1rem;
   }
 
   .pop-up {
     width: 42rem;
     height: 20.5rem;
+    font-size: 1.1rem;
+  }
+
+  .single-tag-label {
+    font-size: 0.7rem;
   }
 }
 

@@ -24,3 +24,31 @@
   padding: 0 0.5rem;
   flex-basis: calc(100% / 4);
 }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.single-tag {
+  flex-basis: calc(100% / 3);
+}
+
+.single-row {
+  flex-basis: calc(100%);
+  padding-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 47.8rem) {
+  .single-tag {
+    flex-basis: calc(100% / 4);
+  }
+
+  .tags {
+    text-align: end;
+    margin-top: 2.8rem;
+    margin-left: 0.6rem;
+    padding-right: 1.8rem;
+  }
+}
