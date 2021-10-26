@@ -79,7 +79,8 @@ option {
   margin-right: 20%;
 }
 
-.text {
+.text,
+.view-single-product {
   margin-top: 1.25rem;
   padding-top: 1%;
   padding-left: 10%;
@@ -89,6 +90,12 @@ option {
   height: 39rem;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 1.12rem;
+}
+
+.view-single-product {
+  color: #fff;
+  padding: 1.25rem;
+  overflow-y: scroll;
 }
 
 .pop-up {
@@ -145,7 +152,7 @@ option {
 }
 
 .title-tags {
-  padding-top: 5px;
+  padding-top: 0.3rem;
   color: #fff;
   font-size: 0.9rem;
 }
@@ -178,6 +185,20 @@ option {
   width: 80%;
   border-radius: 1.1rem;
   background-color: lightgray;
+  cursor: pointer;
+}
+
+.single-product {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.75rem;
+}
+
+.single-product-img img {
+  margin: 0.5rem;
+  width: 25%;
+  border-radius: 1.1rem;
+  background-color: lightgray;
 }
 
 .product-detail {
@@ -205,6 +226,29 @@ option {
   font-size: 0.5rem;
 }
 
+.shade {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.62rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.shade-name {
+  margin-left: 0.31rem;
+  margin-right: 0.31rem;
+  font-size: 0.6rem;
+}
+
+.line {
+  width: 100%;
+}
+
+.single-product-description,
+.single-product-tags {
+  text-align: left;
+}
+
 @media screen and (min-width: 47.8rem) {
   h1 {
     margin-top: 5%;
@@ -223,7 +267,9 @@ option {
     font-size: 0.9rem;
   }
 
-  .label-product-type .label-product-tag {
+  .label-product-type,
+  .label-product-tag {
+
     font-size: 0.9rem;
   }
 
@@ -253,6 +299,17 @@ option {
 
   .single-tag-label {
     font-size: 0.7rem;
+
+  }
+
+  .single-product-title {
+    font-size: 1.25rem;
+  }
+
+  .single-product {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
   }
 }
 
