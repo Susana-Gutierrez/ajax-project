@@ -23,6 +23,7 @@ const $titletags = document.querySelector('.title-tags');
 const $viewSingleProduct = document.querySelector('.view-single-product');
 const $buyNow = document.querySelector('.buy-now');
 var url;
+
 var tags = [];
 
 function newOptiontypeOfProductDOM(number) {
@@ -340,7 +341,6 @@ function handleClickviewProductsRow(event) {
     $viewProducts.className = 'hidden';
     $viewSingleProduct.className = 'view-single-product';
     data.view = 'view-single-product';
-
     $buyNow.className = 'buy-now';
 
     for (let i = 0; i < data.entries.length; i++) {
@@ -358,7 +358,6 @@ function handleClickviewProductsRow(event) {
         };
         data.url = data.entries[i].link;
       }
-
     }
 
     singleProductDetails(objectProduct);
