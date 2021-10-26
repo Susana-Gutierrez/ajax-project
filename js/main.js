@@ -23,6 +23,7 @@ const $natural = document.querySelector('#natural');
 const $titletags = document.querySelector('.title-tags');
 const $viewSingleProduct = document.querySelector('.view-single-product');
 var url;
+
 var tags = [];
 
 function newOptiontypeOfProductDOM(number) {
@@ -40,6 +41,7 @@ function handleClickSearchButton(events) {
 $searchButton.addEventListener('click', handleClickSearchButton);
 
 function listProducts(id, picture, brand, name, price) {
+
   const elementDiv = document.createElement('div');
   elementDiv.setAttribute('class', 'product-container');
   const elementDiv2 = document.createElement('div');
@@ -305,7 +307,6 @@ function handleClickModalSearchButton(events) {
 $modalSearchButton.addEventListener('click', handleClickModalSearchButton);
 
 function handleClickBackButton(event) {
-
   if (data.view === 'view-single-product') {
     $viewSingleProduct.className = 'hidden';
     $viewSingleProduct.innerHTML = '';
