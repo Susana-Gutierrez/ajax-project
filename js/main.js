@@ -283,7 +283,7 @@ function handleClickModalSearchButton(events) {
     $titletags.textContent = '   - tags: ';
     addTitletags();
     for (let i = 0; i < tags.length; i++) {
-      url = 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=' + $typeOfProduct.value + '&product_tags=' + tags[i];
+      url = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=' + $typeOfProduct.value + '&product_tags=' + tags[i];
       ajax(url);
     }
   }
@@ -291,7 +291,7 @@ function handleClickModalSearchButton(events) {
   if (($typeOfProduct.value !== 'product-type') && (tags.length <= 0)) {
     $productTypeTitle.textContent = $typeOfProduct.value;
     $titletags.textContent = '';
-    url = 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=' + $typeOfProduct.value;
+    url = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=' + $typeOfProduct.value;
     ajax(url);
 
   }
@@ -301,7 +301,7 @@ function handleClickModalSearchButton(events) {
     $titletags.textContent = 'Tags: ';
     addTitletags();
     for (let i = 0; i < tags.length; i++) {
-      url = 'http://makeup-api.herokuapp.com/api/v1/products.json?product_tags=' + tags[i];
+      url = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=' + tags[i];
       ajax(url);
     }
   }
