@@ -144,6 +144,7 @@ option {
   border-style: none;
   background-color: #d8bfd8;
   color: #635f5f;
+  cursor: pointer;
 }
 
 .product-type-title {
