@@ -22,6 +22,7 @@ const $natural = document.querySelector('#natural');
 const $titletags = document.querySelector('.title-tags');
 const $viewSingleProduct = document.querySelector('.view-single-product');
 const $buyNow = document.querySelector('.buy-now');
+const $loader = document.querySelector('.loading');
 var url;
 
 var tags = [];
@@ -183,6 +184,7 @@ function checkingCheckboxes() {
 }
 
 function ajax(link) {
+
   var isThereAnEntry = false;
   var xhr = new XMLHttpRequest();
   xhr.open('GET', link);
@@ -229,6 +231,8 @@ function ajax(link) {
         listProducts(idOfProduct, pictureOfProduct, brandOfProduct, nameOfProduct, priceOfProduct);
       }
     }
+    $loader.style.display = 'none';
+
   });
   xhr.send();
 }
@@ -263,6 +267,7 @@ function handleClickModalSearchButton(events) {
   $overlay.className = 'hidden';
   $back.className = 'back';
   $buyNow.className = 'hidden';
+  $loader.style.display = '';
 
   checkingCheckboxes();
 
