@@ -255,6 +255,37 @@ option {
   text-align: left;
 }
 
+.loading-container {
+  contain: content;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-height {
+  align-items: center;
+  height: 100%;
+  margin: 7%;
+}
+
+.loading::after {
+  content: "";
+  width: 3.1rem;
+  height: 3.1rem;
+  border: 0.6rem solid #ddd;
+  border-top-color: purple;
+  border-radius: 50%;
+  animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @media screen and (min-width: 47.8rem) {
   h1 {
     margin-top: 5%;
@@ -326,10 +357,22 @@ option {
     color: #635f5f;
     cursor: pointer;
   }
+
+  .loading::after {
+    content: "";
+    display: block;
+    width: 4.37rem;
+    height: 4.37rem;
+    border: 0.8rem solid #ddd;
+    border-top-color: purple;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+  }
 }
 
 @media screen and (min-width: 64rem) {
   p {
     font-size: 1.1rem;
   }
+}
 }
