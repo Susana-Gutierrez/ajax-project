@@ -23,7 +23,8 @@ const $titletags = document.querySelector('.title-tags');
 const $viewSingleProduct = document.querySelector('.view-single-product');
 const $buyNow = document.querySelector('.buy-now');
 const $loader = document.querySelector('.loading');
-const $emptyResult = document.querySelector('.empty-result');
+const $error = document.querySelector('.error');
+const $errorMsg = document.querySelector('.error-msg');
 var url;
 
 var tags = [];
@@ -36,7 +37,7 @@ function newOptiontypeOfProductDOM(number) {
 }
 
 function handleClickSearchButton(events) {
-  $emptyResult.className = 'hidden';
+  $error.className = 'hidden';
   $modalSearch.className = 'modal-search';
   $overlay.className = 'overlay';
 }
@@ -236,10 +237,18 @@ function ajax(link) {
     $loader.style.display = 'none';
 
     if (data.entries.length === 0) {
-      $emptyResult.className = 'empty-result';
+      $error.className = 'error';
+      $errorMsg.textContent = 'Sorry, we couldn\'t find any results';
     }
 
   });
+
+  xhr.addEventListener('error', function (event) {
+    $loader.style.display = 'none';
+    $error.className = 'error';
+    $errorMsg.textContent = 'An error has occurred. Please check your Internet connection.';
+  });
+
   xhr.send();
 }
 
