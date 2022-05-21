@@ -280,6 +280,26 @@ option {
   animation: loading 1s ease infinite;
 }
 
+.lipstick-empty-msg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.empty-result {
+  text-align: center;
+}
+
+.empty-result-img {
+  margin-top: 45%;
+  margin-bottom: 45%;
+}
+
+.empty-result-msg {
+  color: #c0c0c0;
+}
+
 @keyframes loading {
   to {
     transform: rotate(1turn);
@@ -367,6 +387,15 @@ option {
     border-top-color: purple;
     border-radius: 50%;
     animation: loading 1s ease infinite;
+  }
+
+  .empty-result-img {
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+
+  .lipstick-empty-msg {
+    width: auto;
   }
 }
 
