@@ -280,23 +280,23 @@ option {
   animation: loading 1s ease infinite;
 }
 
-.lipstick-empty-msg {
+.lipstick-error-msg {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
 }
 
-.empty-result {
+.error {
   text-align: center;
 }
 
-.empty-result-img {
+.error-img {
   margin-top: 45%;
   margin-bottom: 45%;
 }
 
-.empty-result-msg {
+.error-msg {
   color: #c0c0c0;
 }
 
@@ -389,12 +389,12 @@ option {
     animation: loading 1s ease infinite;
   }
 
-  .empty-result-img {
+  .error-img {
     margin-top: 20%;
     margin-bottom: 10%;
   }
 
-  .lipstick-empty-msg {
+  .lipstick-error-msg {
     width: auto;
   }
 }
