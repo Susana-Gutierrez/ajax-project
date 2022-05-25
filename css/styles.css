@@ -22,26 +22,27 @@ p {
   font-size: 0.73rem;
 }
 
+button,
+select {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 option {
   font-size: 0.7rem;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 0.6rem;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #7a4dd7;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -57,7 +58,7 @@ option {
   width: 60%;
   height: 39rem;
   padding-top: 9.5rem;
-  background-image: url("../images/makeup.JPG");
+  background-image: url("../images/makeup.jpg");
   border-radius: 1.12rem;
 }
 
@@ -99,15 +100,14 @@ option {
 }
 
 .pop-up {
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
   font-size: 0.9rem;
-  padding-top: 0.9rem;
   padding-right: 0.6rem;
   padding-left: 0.6rem;
-  width: 23rem;
+  width: 17rem;
   height: 15.5rem;
   background: gray;
   background-color: #fff;
@@ -209,6 +209,7 @@ option {
 
 .back,
 .buy-now {
+  margin: 0.1rem;
   width: 5rem;
   height: 2rem;
   border-radius: 1.1rem;
@@ -220,6 +221,7 @@ option {
 
 .buttons {
   padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
   text-align: end;
   margin-right: 20%;
 }
@@ -403,5 +405,4 @@ option {
   p {
     font-size: 1.1rem;
   }
-}
 }
