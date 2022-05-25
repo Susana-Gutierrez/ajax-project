@@ -71,8 +71,8 @@
             <div class="loading loading-height"></div>
           </div>
           <div class="error hidden">
-            <div class="error-img"><img src="images/lipstick_PNG76198.png" alt="Lipstick" class="lipstick-error-msg"></div>
-            <div class="error-msg">Sorry, we couldn't find any results</div>
+            <div class="error-img"><img src="images/lipstick.png" alt="Lipstick" class="lipstick-error-msg"></div>
+            <div class="error-msg"></div>
           </div>
           <div class="view-products-row"></div>
         </div>
@@ -89,56 +89,58 @@
 
     <div class="modal-search hidden">
       <div class="pop-up">
-        <div class="dropdown-list">
+        <form class="form-search">
+          <div class="dropdown-list">
             <label for="product-type" class="label-product-type">Product Type:</label>
             <select id="product-type" name="product-type">
               <option value="product-type">Select a product type...</option>
             </select>
-        </div>
-
-        <div class="tags">
-
-          <div class="single-tag single-row">
-            <span class="label-product-tag">Product Tags:</span>
           </div>
 
-          <div class="single-tag">
-          <label class="single-tag-label" for="vegan">Vegan:</label>
-          <input type="checkbox" id="vegan" name="vegan" value="vegan">
-          </div>
+          <div class="tags">
 
-          <div class="single-tag">
-          <label class="single-tag-label" for="glutenfree">Gluten Free:</label>
-          <input type="checkbox" id="glutenfree" name="glutenfree" value="glutenfree">
-          </div>
+            <div class="single-tag single-row">
+              <span class="label-product-tag">Product Tags:</span>
+            </div>
 
-          <div class="single-tag">
-          <label class="single-tag-label" for="hypoallergenic">Hypoallergenic:</label>
-          <input type="checkbox" id="hypoallergenic" name="hypoallergenic" value="hypoallergenic"><br>
-          </div>
+            <div class="single-tag">
+              <label class="single-tag-label" for="vegan">Vegan:</label>
+              <input type="checkbox" id="vegan" name="vegan" value="vegan">
+            </div>
 
-          <div class="single-tag single-row">
-          </div>
+            <div class="single-tag">
+              <label class="single-tag-label" for="glutenfree">Gluten Free:</label>
+              <input type="checkbox" id="glutenfree" name="glutenfree" value="glutenfree">
+            </div>
 
-          <div class="single-tag">
-          <label class="single-tag-label" for="organic">Organic:</label>
-          <input type="checkbox" id="organic" name="organic" value="organic">
-          </div>
+            <div class="single-tag">
+              <label class="single-tag-label" for="hypoallergenic">Hypoallergenic:</label>
+              <input type="checkbox" id="hypoallergenic" name="hypoallergenic" value="hypoallergenic"><br>
+            </div>
 
-          <div class="single-tag">
-          <label class="single-tag-label" for="notalc">No Talc:</label>
-          <input type="checkbox" id="notalc" name="notalc" value="notalc">
-          </div>
+            <div class="single-tag single-row">
+            </div>
 
-          <div class="single-tag">
-          <label class="single-tag-label" for="notalc">Natural:</label>
-          <input type="checkbox" id="natural" name="natural" value="natural">
-          </div>
+            <div class="single-tag">
+              <label class="single-tag-label" for="organic">Organic:</label>
+              <input type="checkbox" id="organic" name="organic" value="organic">
+            </div>
 
-        </div>
-        <div>
-          <button class="modal-search-button">Search</button>
-        </div>
+            <div class="single-tag">
+              <label class="single-tag-label" for="notalc">No Talc:</label>
+              <input type="checkbox" id="notalc" name="notalc" value="notalc">
+            </div>
+
+            <div class="single-tag">
+              <label class="single-tag-label" for="notalc">Natural:</label>
+              <input type="checkbox" id="natural" name="natural" value="natural">
+            </div>
+
+          </div>
+          <div>
+            <button class="modal-search-button">Search</button>
+          </div>
+        </form>
       </div>
     </div>
 

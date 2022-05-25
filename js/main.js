@@ -6,7 +6,6 @@ const tagsOptions = ['Vegan', 'Gluten Free', 'Hypoallergenic', 'Organic', 'No Ta
 const $typeOfProduct = document.querySelector('#product-type');
 const $searchButton = document.querySelector('.search-button');
 const $modalSearch = document.querySelector('.modal-search');
-const $modalSearchButton = document.querySelector('.modal-search-button');
 const $overlay = document.querySelector('.overlay');
 const $text = document.querySelector('.text');
 const $viewProducts = document.querySelector('.view-products');
@@ -25,6 +24,7 @@ const $buyNow = document.querySelector('.buy-now');
 const $loader = document.querySelector('.loading');
 const $error = document.querySelector('.error');
 const $errorMsg = document.querySelector('.error-msg');
+const $formSearch = document.querySelector('.form-search');
 var url;
 
 var tags = [];
@@ -55,7 +55,7 @@ function listProducts(id, picture, brand, name, price) {
   elementImg.src = picture;
   elementImg.addEventListener('error', function (event) {
     this.onerror = null;
-    elementImg.src = 'images/imagenoavailable.jpg';
+    elementImg.src = 'images/image-no-available.jpg';
   });
 
   const elementDiv3 = document.createElement('div');
@@ -91,7 +91,7 @@ function singleProductDetails(objectProduct) {
   elementImg.src = objectProduct.picture;
   elementImg.addEventListener('error', function (event) {
     this.onerror = null;
-    elementImg.src = 'images/imagenoavailable.jpg';
+    elementImg.src = 'images/image-no-available.jpg';
   });
   const elementDiv4 = document.createElement('div');
   elementDiv4.setAttribute('class', 'single-product');
@@ -188,6 +188,8 @@ function checkingCheckboxes() {
 
 function ajax(link) {
 
+  $loader.style.display = '';
+
   var isThereAnEntry = false;
   var xhr = new XMLHttpRequest();
   xhr.open('GET', link);
@@ -274,7 +276,16 @@ function addTitletags() {
   }
 }
 
-function handleClickModalSearchButton(events) {
+function handleSubmitFormSearch(events) {
+
+  event.preventDefault();
+
+  if ((!$vegan.checked) && (!$glutenFree.checked) && (!$hypoallergenic.checked) && (!$organic.checked) && (!$notalc.checked) && (!$natural.checked) && ($typeOfProduct.value === 'product-type')) {
+    $modalSearch.className = 'hidden';
+    $overlay.className = 'hidden';
+    return;
+  }
+
   tags = [];
   data.entries = [];
   data.view = '';
@@ -282,7 +293,6 @@ function handleClickModalSearchButton(events) {
   $overlay.className = 'hidden';
   $back.className = 'back';
   $buyNow.className = 'hidden';
-  $loader.style.display = '';
 
   checkingCheckboxes();
 
@@ -325,9 +335,10 @@ function handleClickModalSearchButton(events) {
       ajax(url);
     }
   }
+
 }
 
-$modalSearchButton.addEventListener('click', handleClickModalSearchButton);
+$formSearch.addEventListener('submit', handleSubmitFormSearch);
 
 function handleClickBackButton(event) {
 
@@ -354,6 +365,7 @@ function handleClickBackButton(event) {
 $back.addEventListener('click', handleClickBackButton);
 
 function handleClickviewProductsRow(event) {
+
   if (event.target.tagName === 'IMG') {
 
     const idProduct = event.target.getAttribute('product-id');
