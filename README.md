@@ -48,6 +48,7 @@ cd ajax-project
 
 2. Review starter files given
 
+```shell
 ajax-project/
 ├── README.md
 ├── css
@@ -60,5 +61,6 @@ ajax-project/
 │   └── main.js
 ├── package-lock.json
 └── package.json
+```
 
 3. Update given files with the code.
