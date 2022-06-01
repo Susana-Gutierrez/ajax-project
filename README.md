@@ -14,10 +14,10 @@ Users can also be redirected to an external website to purchase the products.
 - Javascript
 - AJAX
 - API
-  ...Endpoint: http://makeup-api.herokuapp.com/api/v1/products.json
-  ...Protocol: HTTPS
-  ...Method: GET
-  ...Response Format: json
+  ⋅⋅⋅Endpoint: http://makeup-api.herokuapp.com/api/v1/products.json⋅⋅
+  ⋅⋅⋅Protocol: HTTPS⋅⋅
+  ⋅⋅⋅Method: GET⋅⋅
+  ⋅⋅⋅Response Format: json
 - Figma
 
 ## Live Demo
