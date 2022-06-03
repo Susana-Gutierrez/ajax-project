@@ -22,7 +22,7 @@ Users can also be redirected to an external website to purchase the products.
 
 ## Live Demo
 
-Try the application live at [https://susana-gutierrez.github.io/ajax-project](https://susana-gutierrez.github.io/ajax-project)
+Try the application live at [https://susana-gutierrez.github.io/go-makeup](https://susana-gutierrez.github.io/go-makeup)
 
 ## Features
 
