@@ -28,6 +28,7 @@ const $formSearch = document.querySelector('.form-search');
 var url;
 
 var tags = [];
+var counter = [];
 
 function newOptiontypeOfProductDOM(number) {
   const elementOption = document.createElement('option');
@@ -186,7 +187,7 @@ function checkingCheckboxes() {
   }
 }
 
-function ajax(link) {
+function ajax(link, i) {
 
   $loader.style.display = '';
 
@@ -238,10 +239,17 @@ function ajax(link) {
     }
     $loader.style.display = 'none';
 
-    if (data.entries.length === 0) {
-      $error.className = 'error';
-      $errorMsg.textContent = 'Sorry, we couldn\'t find any results';
+    counter.push(i);
+
+    if ((tags.length === counter.length) || (tags.length === 0)) {
+      if (data.entries.length === 0) {
+        $error.className = 'error';
+        $errorMsg.textContent = 'Sorry, we couldn\'t find any results';
+      }
+      counter = [];
     }
+
+
 
   });
 
@@ -314,15 +322,16 @@ function handleSubmitFormSearch(events) {
     addTitletags();
     for (let i = 0; i < tags.length; i++) {
       url = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=' + $typeOfProduct.value + '&product_tags=' + tags[i];
-      ajax(url);
+      ajax(url, i);
     }
   }
 
   if (($typeOfProduct.value !== 'product-type') && (tags.length <= 0)) {
     $productTypeTitle.textContent = $typeOfProduct.value;
     $titletags.textContent = '';
+    const i = 0;
     url = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=' + $typeOfProduct.value;
-    ajax(url);
+    ajax(url, i);
 
   }
 
@@ -332,7 +341,7 @@ function handleSubmitFormSearch(events) {
     addTitletags();
     for (let i = 0; i < tags.length; i++) {
       url = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_tags=' + tags[i];
-      ajax(url);
+      ajax(url, i);
     }
   }
 
