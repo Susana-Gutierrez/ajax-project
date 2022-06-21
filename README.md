@@ -1,4 +1,4 @@
-# Natural Makeup Search
+# Go Makeup
 
 A dynamic web app that allows users to search for natural makeup products.
 
@@ -11,7 +11,7 @@ Users can also be redirected to an external website to purchase the products.
 
 - HTML5
 - CSS3
-- Javascript
+- JavaScript
 - AJAX
 - API
    - EndPoint: http://makeup-api.herokuapp.com/api/v1/products.json
@@ -46,8 +46,8 @@ Try the application live at [https://susana-gutierrez.github.io/go-makeup](https
 1. Clone the repository.
 
 ```shell
-git clone git@github.com:Learning-Fuze/ajax-project-template.git
-cd ajax-project
+git clone git@github.com:Susana-Gutierrez/go-makeup.git
+cd go-makeup
 ```
 
 2. Review starter files given
@@ -67,4 +67,4 @@ ajax-project/
 └── package.json
 ```
 
-3. Update given files with the code.
+3. Update given files as needed.
